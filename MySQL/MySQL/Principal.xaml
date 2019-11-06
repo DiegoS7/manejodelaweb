@@ -1,0 +1,21 @@
+﻿<Window x:Class="MySQL.Principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MySQL"
+        mc:Ignorable="d"
+        Title="Principal" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="lvContactos" HorizontalAlignment="Left" Height="274" Margin="25,25,0,0" VerticalAlignment="Top" Width="745">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="86,352,0,0" VerticalAlignment="Top" Width="99" Height="37" Click="BtnAgregar_Click"/>
+        <Button x:Name="btnEliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="220,352,0,0" VerticalAlignment="Top" Width="99" Height="37" Click="Button_Click"/>
+
+    </Grid>
+</Window>
