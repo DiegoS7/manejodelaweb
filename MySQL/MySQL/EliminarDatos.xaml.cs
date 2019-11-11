@@ -11,7 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using MySQL.Clases;
+using SQLite;
 namespace MySQL
 {
     /// <summary>
@@ -22,6 +23,16 @@ namespace MySQL
         public EliminarDatos()
         {
             InitializeComponent();
+        }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            using(SQLiteConnection conexion = new SQLiteConnection(App.databasePath))
+            {
+                string sentenciaSQL = "delete from contactos where Nombre='" + txtNombre.Text + "'";
+                conexion.Execute(sentenciaSQL);
+            }
+            Close();
         }
     }
 }

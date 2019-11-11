@@ -49,7 +49,8 @@ namespace MySQL
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            MySQL.EliminarDatos form = new MySQL.EliminarDatos();
+            form.ShowDialog();
         }
     }
 }
