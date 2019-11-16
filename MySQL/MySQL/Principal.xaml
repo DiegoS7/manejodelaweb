@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MySQL"
         mc:Ignorable="d"
         Title="Principal" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FFEDD3F1">
         <ListView x:Name="lvContactos" HorizontalAlignment="Left" Height="274" Margin="25,25,0,0" VerticalAlignment="Top" Width="745">
             <ListView.View>
                 <GridView>
