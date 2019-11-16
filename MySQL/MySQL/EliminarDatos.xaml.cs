@@ -29,7 +29,7 @@ namespace MySQL
         {
             using(SQLiteConnection conexion = new SQLiteConnection(App.databasePath))
             {
-                string sentenciaSQL = "delete from contactos where Nombre='" + txtNombre.Text + "'";
+                string sentenciaSQL = "delete from deportistas where Nombre='" + txtNombre.Text + "'";
                 conexion.Execute(sentenciaSQL);
             }
             Close();

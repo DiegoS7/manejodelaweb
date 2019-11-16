@@ -7,7 +7,7 @@ using SQLite; //Agregamos libreria
 
 namespace MySQL.Clases
 {
-    class Contactos
+    class Deportistas
     {
         [PrimaryKey, AutoIncrement]
 

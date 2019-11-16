@@ -29,7 +29,7 @@ namespace MySQL
 
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            Contactos contacto = new Contactos()
+            Deportistas deportistas = new Deportistas()
             {
                 Nombre = txtNombre.Text,
                 Deporte = txtDeporte.Text,
@@ -37,8 +37,8 @@ namespace MySQL
             };
             using (SQLiteConnection conexion = new SQLiteConnection(App.databasePath))
             {
-                conexion.CreateTable<Contactos>();
-                conexion.Insert(contacto);
+                conexion.CreateTable<Deportistas>();
+                conexion.Insert(deportistas);
             }
             Close();
         }

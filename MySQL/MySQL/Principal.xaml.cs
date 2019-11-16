@@ -21,23 +21,23 @@ namespace MySQL
     /// </summary>
     public partial class Principal : Window
     {
-        List<Contactos> contactos;
+        List<Deportistas> deportistas;
         public Principal()
         {
             InitializeComponent();
-            contactos = new List<Contactos>();
+            deportistas = new List<Deportistas>();
             LeerBaseDatos();
         }
         void LeerBaseDatos()
         {
             using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.databasePath))
             {
-                conn.CreateTable<Contactos>();
-                contactos = (conn.Table<Contactos>().ToList()).OrderBy(c => c.Nombre).ToList();
+                conn.CreateTable<Deportistas>();
+                deportistas = (conn.Table<Deportistas>().ToList()).OrderBy(c => c.Nombre).ToList();
             }
-            if (contactos!=null)
+            if (deportistas != null)
             {
-                lvContactos.ItemsSource = contactos;
+                lvContactos.ItemsSource = deportistas;
             }
         }
 
