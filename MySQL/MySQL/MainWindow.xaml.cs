@@ -32,8 +32,8 @@ namespace MySQL
             Contactos contacto = new Contactos()
             {
                 Nombre = txtNombre.Text,
-                Correo = txtCorreo.Text,
-                Telefono = txtTelefono.Text
+                Deporte = txtDeporte.Text,
+                Edad = txtEdad.Text
             };
             using (SQLiteConnection conexion = new SQLiteConnection(App.databasePath))
             {

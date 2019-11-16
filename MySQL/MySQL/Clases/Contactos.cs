@@ -14,12 +14,12 @@ namespace MySQL.Clases
         public int Id { get; set; }
 
         public string Nombre { get; set; }
-        public string Correo { get; set; }
-        public string Telefono { get; set; }
+        public string Deporte { get; set; }
+        public string Edad { get; set; }
 
         public override string ToString()
         {
-            return $"{Nombre} - {Correo} - {Telefono}";
+            return $"{Nombre} - {Deporte} - {Edad}";
         }
     }
 }
